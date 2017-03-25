@@ -1,0 +1,12 @@
+{
+  "name": "node_coding_challenge_3",
+  "version": "0.0.1",
+  "dependencies": {
+    "connect": "latest",
+    "socket.io": "latest",
+    "serve-static": "latest",
+    "mssql": "latest",
+    "@google/maps": "latest",
+    "ip-address": "latest"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "database": {
+    "server": "APOLLO\\SQLEXPRESS01",
+    "user": "lorenzo",
+    "password": "lorenzo98",
+    "database": "codingchallenge3"
+  },
+  "port": 8888
+}
