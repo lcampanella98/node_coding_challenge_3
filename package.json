@@ -2,11 +2,9 @@
   "name": "node_coding_challenge_3",
   "version": "0.0.1",
   "dependencies": {
-    "@google/maps": "latest",
     "connect": "latest",
     "formidable": "^1.1.1",
     "ip-address": "latest",
-    "jquery": "latest",
     "moment": "latest",
     "mssql": "latest",
     "node-freegeoip": "latest",

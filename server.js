@@ -7,7 +7,6 @@ var connect = require('connect');
 var sql = require('mssql');
 
 var serveStatic = require('serve-static');
-var mapClient = require('@google/maps');
 var freegeoip = require('node-freegeoip');
 var moment = require('moment');
 var NodeSession = require('node-session');
@@ -221,7 +220,7 @@ app.use('/recentData', function (req, res, next) {
         var sqlRequest = new sql.Request(sqlCon);
 
         // select data from last 5 minutes
-        var q = "SELECT * FROM visits WHERE DATEADD(mm,5,date_accessed) > GETDATE()";
+        var q = "SELECT * FROM visits WHERE DATEADD(mi,5,date_accessed) > GETDATE()";
 
         sqlRequest.query(q, function (error, records) {
             if (error) {
