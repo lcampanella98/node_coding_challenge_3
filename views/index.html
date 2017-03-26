@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>LocateMe</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="javascripts/indexMain.js"></script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_fb5Xm0-FDlv2DqM35wvU0SCKaaZ5lWo&callback=initMap">
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1 class="title-header">LocateMe</h1>
+        </div>
+    </div>
+    <a href="/admin" class="redirect-link"><button id="btn-login" class="btn btn-primary">Login to Dashboard</button></a>
+    <br><br><br>
+    <div class="row">
+        <div id="map" class="col-lg-12 col-md-12 col-sm-12"></div>
+    </div>
+    <br><br>
+</div>
+
+</body>
+</html>

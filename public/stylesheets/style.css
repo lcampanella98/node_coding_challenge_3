@@ -1,0 +1,51 @@
+
+#login-container {
+    width: 400px;
+    height: 280px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -140px 0 0 -200px;
+    border: medium solid lightgray;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    text-align: center;
+}
+
+#login-container h2, label, input {
+    display: inline-block;
+}
+
+#login-container #bad-login-text {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin: -55px 0 0 40px;
+    color: rgba(236, 0, 13, 0.83)
+}
+
+#login-submit {
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    margin: -60px 0 0 -100px;
+}
+
+.title-header {
+    margin-top:-15px;
+    text-align: center;
+    color: black;
+}
+
+#map {
+    width: 100%;
+    height: 700px;
+    background-color: grey;
+    border: 2px solid lightgrey;
+}
+
+.redirect-link {
+    float:right;
+    display:block;
+    padding-left: 10px;
+}

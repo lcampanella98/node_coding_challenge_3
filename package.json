@@ -2,11 +2,16 @@
   "name": "node_coding_challenge_3",
   "version": "0.0.1",
   "dependencies": {
-    "connect": "latest",
-    "socket.io": "latest",
-    "serve-static": "latest",
-    "mssql": "latest",
     "@google/maps": "latest",
-    "ip-address": "latest"
+    "connect": "latest",
+    "formidable": "^1.1.1",
+    "ip-address": "latest",
+    "jquery": "latest",
+    "moment": "latest",
+    "mssql": "latest",
+    "node-freegeoip": "latest",
+    "node-session": "latest",
+    "serve-static": "latest",
+    "socket.io": "latest"
   }
 }
