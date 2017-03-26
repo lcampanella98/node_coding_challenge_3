@@ -1,7 +1,7 @@
 var visitData;
 var map;
 
-var socket = io.connect("http://localhost:8888");
+var socket = io.connect("https://localhost:8888");
 
 
 function initMap() {

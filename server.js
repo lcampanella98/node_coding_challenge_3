@@ -1,4 +1,4 @@
-var http = require('http');
+var https = require('https');
 var path = require('path');
 var fs = require('fs');
 
@@ -12,6 +12,7 @@ var freegeoip = require('node-freegeoip');
 var moment = require('moment');
 var NodeSession = require('node-session');
 var formidable = require('formidable');
+var tls = require('tls');
 
 // initialize session
 var session = new NodeSession({
@@ -46,7 +47,14 @@ var sqlCon = new sql.Connection(dbConfig, function (err) {
 
 var app = connect();
 
-var server = http.createServer(app);
+
+// setup certificate
+var privateKey = fs.readFileSync(path.join(__dirname, 'keys/key.pem'));
+var certificate = fs.readFileSync(path.join(__dirname, 'keys/key-cert.pem'));
+
+var options = {key:privateKey, cert:certificate};
+
+var server = https.createServer(options, app);
 
 var io = require('socket.io')(server); // sockets
 
@@ -184,8 +192,10 @@ app.use('/newLocation', function (req, res, next) { // a user visited the webpag
 
             if (locationData['pos'] === undefined) { // user did NOT provide their location
                 freegeoip.getLocation(address, function (location) { // so we request it from a 3rd party geolocator
-                    pos = {'lat': location['latitude'], 'lng': location['longitude']};
-                    insertLocation(pos);
+                    if (location !== null) {
+                        pos = {'lat': location['latitude'], 'lng': location['longitude']};
+                        insertLocation(pos);
+                    }
                 });
             } else {
                 insertLocation(locationData['pos']); // user provided their location
@@ -227,4 +237,4 @@ app.use('/recentData', function (req, res, next) {
 });
 
 
-server.listen(port, '127.0.0.1');
+server.listen(port, '0.0.0.0');
